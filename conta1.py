@@ -17,7 +17,7 @@ class Conta:
     def saca(self, valor):
         self.__saldo -= valor
 
-     def  transfere(self, valor, destino):
+    def  transfere(self, valor, destino):
         self.saca(valor)
         destino.deposita(valor)
 
@@ -34,6 +34,11 @@ class Conta:
     @limite.setter
     def limite(self):
         self.__limite = limite
+
+    @staticmethod
+    def codigos_bancos():
+        return{'BB': '001', 'Caixa': '104', 'Bradesco':'237'}
+
 
 
 conta = Conta(123, "Nico", 55.5, 1000)
